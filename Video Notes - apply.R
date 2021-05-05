@@ -11,3 +11,8 @@ apply(x, 2, mean)
 
 #to get the sum of each row
 apply(x, 1, sum)
+
+#how mapply makes life easier
+#before
+list(rep(1:4), rep(2,3), rep(3:2), rep(4:1))
+mapply(rep, 1:4, 4:1)
