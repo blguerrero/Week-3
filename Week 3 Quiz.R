@@ -37,3 +37,24 @@ with(mtcars, tapply(mpg, cyl, mean))
 #did not check this because does not exculsively produce mpg mean
 #gives the mean for all columns
 apply(mtcars, 2, mean)
+
+#4 - What is the absolute difference between the average horsepower 
+#of 4-cylinder cars and the average horsepower of 8-cylinder cars?
+#First, you want to separate out 4 cylinder and 8 cylinder cars
+#Then, get their average horsepower
+#Last, take the absolute difference (|x-y|).
+?mtcars
+#gonna want to use mtcars$hp somewhere
+tapply(mtcars$hp, mtcars$cyl, mean)
+#result of 8 cylinder - result of 4 cylinder
+209.21429 - 82.63636
+
+#5 - If you run debug(ls), what happens when you next call the 'ls' function?
+debug(ls)
+ls()
+?ls
+?debug
+#Execution of 'ls' will suspend at the beginning of the function and you will 
+#be in the browser.
+#got answer by doing ?debug to see what it does
+
